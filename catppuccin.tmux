@@ -104,11 +104,13 @@ main() {
   local status_connect_separator=$(get_tmux_option "@catppuccin_status_connect_separator" "yes")
   local status_fill=$(get_tmux_option "@catppuccin_status_fill" "icon")
 
-  local status_modules_left=$(get_tmux_option "@catppuccin_status_modules_left" "")
+  # local status_modules_left=$(get_tmux_option "@catppuccin_status_modules_left" "")
+  local status_modules_left=$(get_tmux_option "@catppuccin_status_modules_left" "session")
   local loaded_modules_left=$(load_modules "$status_modules_left" "$modules_custom_path" "$modules_status_path")
   set status-left "$loaded_modules_left"
 
-  local status_modules_right=$(get_tmux_option "@catppuccin_status_modules_right" "application session")
+  # local status_modules_right=$(get_tmux_option "@catppuccin_status_modules_right" "application session")
+  local status_modules_right=$(get_tmux_option "@catppuccin_status_modules_right" "date_time")
   local loaded_modules_right=$(load_modules "$status_modules_right" "$modules_custom_path" "$modules_status_path")
   set status-right "$loaded_modules_right"
 
