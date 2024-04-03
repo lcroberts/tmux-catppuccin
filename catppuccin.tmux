@@ -109,7 +109,7 @@ main() {
   set status-left "$loaded_modules_left"
 
   # local status_modules_right=$(get_tmux_option "@catppuccin_status_modules_right" "application session")
-  local status_modules_right=$(get_tmux_option "@catppuccin_status_modules_right" "date_time session")
+  local status_modules_right=$(get_tmux_option "@catppuccin_status_modules_right" "directory session")
   local loaded_modules_right=$(load_modules "$status_modules_right" "$modules_custom_path" "$modules_status_path")
   set status-right "$loaded_modules_right"
 
